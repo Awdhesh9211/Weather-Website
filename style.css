@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+html,body{
+    font-size: 62.5%;
+    height: 100%;
+
+}
+html{
+    background: #eee;
+}
+.mainbox{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.box{
+    width: 20vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgb(0,0,0,0.2);
+    background: lightskyblue;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+    
+}
+.box:after{
+    content: "";
+    display: block ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+.info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    z-index: 4;
+}
+.location{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates {
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translate(00.5rem); 
+    }
+}
+#date{
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #57606f;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+#temp{
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+#tempmin_max{
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #57606f
+}
+#weathercon{
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+}
+#weathercon .fas{
+    position: absolute;
+    top: 12rem;
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime {
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width:600px){
+    .box{
+        width: 90vw;
+        height: 80vh;
+    }
+
+}
+.searchWeather{
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 55px;
+    position: absolute;
+    left: 3rem;
+    top:18rem;  
+}
+.searchWeather{
+    gap:8px;
+    display: flex;
+    position: absolute;
+    top:1em;
+
+}
+input{
+    width: 70%;
+    height: 80%;
+    border-radius: 8px;
+    border: 1px solid gray;
+    outline: #094979;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 17px;
+}
+button{
+    width: 20%;
+    height: 80%;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.weathercon{
+  height: 4em;
+  width: 5em;
+}
+.ph{
+  color: yellow;
+  font-size: 4em;
+}
+.fa-solid{
+  color: green;
+  font-size: 1em;
+  
+}
